@@ -1,0 +1,51 @@
+[
+    {
+      "id": 1,
+      "name": "Virat Kohli",
+      "picture": "https://staticg.sportskeeda.com/editor/2024/05/d973a-17150616187538-1920.jpg",
+      "price": "200000",
+      "battingStyle": "Right-hand",
+      "country": "India"
+    },
+    {
+      "id": 2,
+      "name": "David Warner",
+      "picture": "https://static.cricbuzz.com/a/img/v1/1080x608/i1/c563248/david-warner-is-eligible-to-captain-sydney-thunder-in-the-upcoming-bbl.jpg",
+      "price": "102000",
+      "battingStyle": "Left-hand",
+      "country": "Australia"
+    },
+    {
+      "id": 3,
+      "name": "Joe Root",
+      "picture": "https://www.google.com/url?sa=i&url=https%3A%2F%2Ftwitter.com%2Froot66&psig=AOvVaw0yU-KIqvI3GvTUX3NkVIE8&ust=1730033249377000&source=images&cd=vfe&opi=89978449&ved=0CBQQjRxqFwoTCNiU8pqKrIkDFQAAAAAdAAAAABAJ",
+      "price": "106000",
+      "battingStyle": "Right-hand",
+      "country": "England"
+    },
+    {
+      "id": 4,
+      "name": "Kane Williamson",
+      "picture": "https://m.economictimes.com/thumb/msid-105287296,width-1600,height-900,resizemode-4,imgsize-43766/kane-williamson.jpg",
+      "price": "110000",
+      "battingStyle": "Right-hand",
+      "country": "New Zealand"
+    },
+    {
+      "id": 5,
+      "name": "Babar Azam",
+      "picture": "https://i.aaj.tv/primary/2023/05/03125200e8011d7.webp",
+      "price": "130000",
+      "battingStyle": "Right-hand",
+      "country": "Pakistan"
+    },
+    {
+      "id": 6,
+      "name": "Quinton de Kock",
+      "picture": "https://encrypted-tbn0.gstatic.com/images?q=tbn:ANd9GcQ0xYcUfyMVDgonQVOuOekOcGlU6GvIS8iz7Q&s",
+      "price": "150000",
+      "battingStyle": "Left-hand",
+      "country": "South Africa"
+    }
+  ]
+  
