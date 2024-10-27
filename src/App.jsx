@@ -4,9 +4,12 @@ import viteLogo from '/vite.svg'
 import './App.css'
 import { SiBitcoinsv } from "react-icons/si";
 import Load from './loadData/Load';
+import Loadplayer from './loadData/Loadplayer';
+
 
 function App() {
-  const [count, setCount] = useState(0)
+  
+  const [coins, setCoins] = useState(0);
 
   return (
     <>
@@ -23,7 +26,7 @@ function App() {
           <button className=' ml-5 mr-5 px-3 text-gray-700 '> Fixture </button>
           <button className=' ml-5 mr-5 px-3 text-gray-700 '> Team </button>
           <button className=' ml-5 mr-5 px-3 text-gray-700 '> Schedule </button>
-          <button className=' ml-5 mr-5 px-3 border-2 rounded-lg p-1 font-semibold  '> <span> 0 </span> Coin  </button>
+          <button className=' ml-5 mr-5 px-3 border-2 rounded-lg p-1 font-semibold  '> <span> {coins} </span> Coin  </button>
 
         </div>
 
@@ -35,7 +38,7 @@ function App() {
         <img className='mx-auto py-6' src="banner-main.png" alt="" /> 
         <h1 className='text-white text-4xl font-bold'> Assemble Your Ultimate Dream 11 Cricket Team </h1>
         <h3 className=' py-4 text-gray-400 text-xl '> Beyond Boundaries Beyond Limits </h3>
-        <button className='border-2 border-black  font-semibold text-base bg-lime-500 py-2 px-3 rounded-xl outline-double outline-inherit text-black '> Claim Free Credit </button>
+        <button onClick={ () => setCoins(coins + 10000000)} className='border-2 border-black  font-semibold text-base bg-lime-500 py-2 px-3 rounded-xl outline-double outline-inherit text-black '> Claim Free Credit </button>
 
       </div>
 
@@ -45,10 +48,10 @@ function App() {
 
         <div className='flex justify-between px-24'> 
 
-          <div> <h1 className='text-xl font-bold text-black'> Available Players</h1> </div>
+          <div> <h1 className='text-2xl font-bold text-black'> Available Players</h1> </div>
 
-          <div className='flex'> <button className='px-3 py-2 font-semibold text-black rounded-xl bg-lime-400'> Available  </button>
-                 <button className='px-3 py-2 rounded-xl bg-white border-2' > Selected </button> 
+          <div className='flex'> <button className='px-3 py-2 font-semibold text-black rounded-l-xl bg-lime-400'> Available  </button>
+                 <button className='px-3 py-2 rounded-r-xl bg-white border-2' > Selected </button> 
           </div>
 
 
@@ -62,7 +65,11 @@ function App() {
 
        {/* LOADING DATA HERE  */}
 
-       <Load>   </Load>
+       <div className=''>
+
+         <Load>   </Load>
+
+       </div>
 
       {/* FOOTER SECTION  */}
 

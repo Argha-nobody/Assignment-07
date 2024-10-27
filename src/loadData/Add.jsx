@@ -1,6 +1,9 @@
 import React from 'react';
 
-const addPlayers = () => {
+const Add = () => {
+
+    
+
     return (
         <div>
             
@@ -8,4 +11,4 @@ const addPlayers = () => {
     );
 };
 
-export default addPlayers;
+export default Add;
