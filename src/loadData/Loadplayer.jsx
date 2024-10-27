@@ -1,5 +1,4 @@
 import React from 'react';
-import Add from './Add';
 
 const Loadplayer = ({ load }) => {
   const { id, name, picture, country ,price,battingStyle  } = load;

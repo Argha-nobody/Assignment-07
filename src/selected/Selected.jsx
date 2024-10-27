@@ -1,14 +1,13 @@
 import React from 'react';
 
-const Add = () => {
-
-    
-
+const Selected = () => {
     return (
         <div>
+            <h1> Document </h1>
+            
             
         </div>
     );
 };
 
-export default Add;
+export default Selected;

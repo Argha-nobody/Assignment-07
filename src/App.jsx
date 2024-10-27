@@ -1,15 +1,31 @@
 import { useState } from 'react'
-import reactLogo from './assets/react.svg'
-import viteLogo from '/vite.svg'
 import './App.css'
-import { SiBitcoinsv } from "react-icons/si";
 import Load from './loadData/Load';
-import Loadplayer from './loadData/Loadplayer';
-
+import Selected from './selected/Selected';
 
 function App() {
   
   const [coins, setCoins] = useState(0);
+  const [set,setPlayer] = useState([]);
+  const [showAvailable, setShowAvailable] = useState(true);
+
+  const added = (load) => {
+    const doesexist = set.find(previousone => previousone.id === load.id )
+
+    if(!doesexist)
+    {
+      setPlayer([...set , load ])
+    }
+    else
+    {
+      alert("already added")
+    }
+
+
+    
+  }
+
+  console.log(set);
 
   return (
     <>
@@ -50,9 +66,11 @@ function App() {
 
           <div> <h1 className='text-2xl font-bold text-black'> Available Players</h1> </div>
 
-          <div className='flex'> <button className='px-3 py-2 font-semibold text-black rounded-l-xl bg-lime-400'> Available  </button>
-                 <button className='px-3 py-2 rounded-r-xl bg-white border-2' > Selected </button> 
+          <div className='flex'> <button onClick={() => setShowAvailable(true)} className='px-3 py-2 font-semibold text-black rounded-l-xl bg-lime-400'> Available  </button>
+                 <button onClick={() => setShowAvailable(false)} className='px-3 py-2 rounded-r-xl bg-white border-2' > Selected </button> 
           </div>
+
+          
 
 
         </div>
@@ -67,7 +85,13 @@ function App() {
 
        <div className=''>
 
-         <Load>   </Load>
+         <Load added={added} >   </Load>
+
+       </div>
+
+       <div>
+
+           <Selected> </Selected>
 
        </div>
 
