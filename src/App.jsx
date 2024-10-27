@@ -6,7 +6,7 @@ import Selected from './selected/Selected';
 function App() {
   
   const [coins, setCoins] = useState(0);
-  const [set,setPlayer] = useState([]);
+  const [set,setPlayerone] = useState([]);
   const [showAvailable, setShowAvailable] = useState(true);
 
   const added = (load) => {
@@ -14,19 +14,17 @@ function App() {
 
     if(!doesexist)
     {
-      setPlayer([...set , load ])
+      setPlayerone([...set , load ])
     }
     else
     {
       alert("already added")
     }
-
-
-    
+  
   }
 
   console.log(set);
-
+  console.log(setPlayerone);
   return (
     <>
 
@@ -54,7 +52,9 @@ function App() {
         <img className='mx-auto py-6' src="banner-main.png" alt="" /> 
         <h1 className='text-white text-4xl font-bold'> Assemble Your Ultimate Dream 11 Cricket Team </h1>
         <h3 className=' py-4 text-gray-400 text-xl '> Beyond Boundaries Beyond Limits </h3>
-        <button onClick={ () => setCoins(coins + 10000000)} className='border-2 border-black  font-semibold text-base bg-lime-500 py-2 px-3 rounded-xl outline-double outline-inherit text-black '> Claim Free Credit </button>
+        <button onClick={ () => {setCoins(coins + 10000000); 
+          alert("Coins Successfully Added");}
+          } className='border-2 border-black  font-semibold text-base bg-lime-500 py-2 px-3 rounded-xl outline-double outline-inherit text-black '> Claim Free Credit </button>
 
       </div>
 
@@ -67,7 +67,7 @@ function App() {
           <div> <h1 className='text-2xl font-bold text-black'> Available Players</h1> </div>
 
           <div className='flex'> <button onClick={() => setShowAvailable(true)} className='px-3 py-2 font-semibold text-black rounded-l-xl bg-lime-400'> Available  </button>
-                 <button onClick={() => setShowAvailable(false)} className='px-3 py-2 rounded-r-xl bg-white border-2' > Selected </button> 
+                 <button onClick={() => setShowAvailable(false)} className='px-3 py-2 rounded-r-xl bg-white border-2' > Selected {set.length} / 6 </button> 
           </div>
 
           
@@ -83,17 +83,16 @@ function App() {
 
        {/* LOADING DATA HERE  */}
 
-       <div className=''>
+        {/* CONDITIONAL RENDERING FOR SECTIONS */}
+      <div>
+        {showAvailable ? (
+          <Load added={added} />
+        ) : (
+          <Selected set={set} />
+        )}
+      </div>
 
-         <Load added={added} >   </Load>
-
-       </div>
-
-       <div>
-
-           <Selected> </Selected>
-
-       </div>
+       
 
       {/* FOOTER SECTION  */}
 

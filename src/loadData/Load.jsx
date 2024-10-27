@@ -1,7 +1,7 @@
 import React, { useEffect, useState } from 'react';
 
 
-const Load = ( {added} ) => {
+const Load = ( {added , addedone} ) => {
     const [player, setPlayer] = useState([]);
  
     useEffect(() => {
