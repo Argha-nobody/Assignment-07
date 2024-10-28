@@ -2,6 +2,9 @@ import { useState } from 'react'
 import './App.css'
 import Load from './loadData/Load';
 import Selected from './selected/Selected';
+import bannerimage from './assets/banner-main.png'
+import logomainimage from './assets/logo.png'
+import logofooterimage from './assets/logo-footer.png'
 
 function App() {
   
@@ -32,7 +35,7 @@ function App() {
       
       <div className='flex justify-between px-24 py-8'>
 
-        <div> <img src="logo.png" alt="" /> </div>
+        <div> <img src={logomainimage} alt="" /> </div>
 
         <div>
 
@@ -49,7 +52,7 @@ function App() {
       <div  className=' text-center max-w-6xl mx-auto h-[430px] bg-gradient-to-r from-black via-gray-900 to-pink-400
       rounded-2xl'>
 
-        <img className='mx-auto py-6' src="banner-main.png" alt="" /> 
+        <img className='mx-auto py-6' src={bannerimage} alt="" /> 
         <h1 className='text-white text-4xl font-bold'> Assemble Your Ultimate Dream 11 Cricket Team </h1>
         <h3 className=' py-4 text-gray-400 text-xl '> Beyond Boundaries Beyond Limits </h3>
         <button onClick={ () => {setCoins(coins + 10000000); 
@@ -114,7 +117,7 @@ function App() {
 
         </div>
 
-      <img className='mx-auto mt-15' src="logo-footer.png" alt="" />
+      <img className='mx-auto mt-15' src={logofooterimage} alt="" />
 
       <div className="footer mt-10  text-base-content p-10 flex flex-col lg:flex-row gap-10">
 
